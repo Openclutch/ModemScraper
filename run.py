@@ -8,9 +8,6 @@ page = requests.get("http://192.168.100.1/Diagnostics.asp")
 # get datetime for filename
 datetime = time.strftime("%Y-%m-%d %H-%M")
 
-# debugging while at work, comment out above and change how it's called below
-# html = open("index.html").read()
-
 soup = BeautifulSoup(page.content, 'html.parser')
 allTables = soup.find_all('table', class_='light1')
 
